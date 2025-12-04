@@ -68,18 +68,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSectio
       </nav>
 
       <div className={`p-5 space-y-4 ${isDarkMode ? 'border-t border-white/10' : 'border-t-2 border-black bg-white'}`}>
-         <button
-          onClick={toggleCrt}
-          className={`w-full flex items-center justify-center space-x-2 p-3 transition-all ${isOpen ? '' : 'px-0'} ${
-            isDarkMode 
-              ? `${isCrtMode ? 'bg-green-500/20 text-green-400 border border-green-500/50 rounded-lg' : 'bg-white/5 text-gray-400 rounded-lg hover:bg-white/10'}` 
-              : `border-2 border-black ${isCrtMode ? 'bg-[#00ff00] text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]' : 'bg-gray-100 text-gray-400 shadow-none hover:bg-gray-200'}`
-          }`}
-        >
-          <Monitor size={20} strokeWidth={3} />
-          {isOpen && <span className="font-black uppercase">CRT: {isCrtMode ? 'ON' : 'OFF'}</span>}
-        </button>
-
         <button
           onClick={toggleTheme}
           className={`w-full flex items-center justify-center space-x-2 p-3 transition-all ${
